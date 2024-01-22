@@ -1,0 +1,49 @@
+body{
+    min-height: 75vh;
+}
+main{
+    min-height: 75vh;
+}
+
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    
+}
+
+nav .logo {
+    float: left;
+    padding: 15px;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    justify-content: flex-end;
+}
+
+.social-icons {
+    margin-top: 10px;
+    color: white;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 20px;
+}
