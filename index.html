@@ -21,7 +21,36 @@
         </nav>
     </header>
 
-    <main id ="main">
+    <main id="main">
+
+        <form id="form">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName">
+
+            <label for="dep">Department</label>
+            <select name="Department" id="dep">
+                <option value="Administration">Administration</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Development">Development</option>
+                <option value="Finance">Finance</option>
+            </select>
+
+            <label for="lvl">Level</label>
+            <select name="Level" id="lvl">
+                <option value="Junior">Junior</option>
+                <option value="Mid-Senior">Mid-Senior</option>
+                <option value="Senior">Senior</option>
+
+            </select>
+
+            <label for="imgUrl">Image URL</label>
+            <input type="text" id="imgUrl">
+
+            <label for="subBtn">Submit</label>
+            <input type="Submit" id="subBtn">
+
+        </form>
+        
         <script src="./jsFiles/app.js"></script>
 
 

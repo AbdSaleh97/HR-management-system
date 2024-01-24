@@ -1,15 +1,6 @@
-body{
-    min-height: 75vh;
-}
-main{
-    min-height: 75vh;
-}
-
-
 nav {
     background-color: #333;
     overflow: hidden;
-    
 }
 
 nav .logo {
@@ -46,4 +37,66 @@ footer {
     color: #f2f2f2;
     text-decoration: none;
     font-size: 20px;
+}
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input,
+select,
+button {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
