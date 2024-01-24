@@ -48,43 +48,68 @@ Employee.prototype.render = function () {
     let imgDiv = document.createElement("img");
     imgDiv.src = this.img;
     imgDiv.alt = "img";
-    imgDiv.style.width = '100%';
+    imgDiv.style.width = '90%';
     imgDiv.style.borderRadius = '50%';
-    imgDiv.style.marginBottom = '15px';
+    imgDiv.style.marginBottom = '20px';
+    imgDiv.style.marginTop = '20px';
+
     
-    card.appendChild(imgDiv);
-    console.log(imgDiv);
+    let imgBckGround = document.createElement("div");
+
+    imgBckGround.appendChild(imgDiv);
+    imgBckGround.style.borderRadius = '10%';
+
+    imgBckGround.style.backgroundColor = '#050040';
+
+
+    card.appendChild(imgBckGround);
+    // console.log(imgDiv);
 
     let name = document.createElement("p");
     name.innerText = "Name: " + this.fullName;
+    name.style.fontSize = '18px';
+    name.style.color = '#fff';
+    name.style.fontFamily = 'Arial, sans-serif';
     card.appendChild(name);
-    console.log(name);
+    // console.log(name);
 
 
     let id = document.createElement("p");
     id.innerText = "ID: " + this.empId;
+    id.style.fontSize = '18px';
+    id.style.color = '#fff';
+    id.style.fontFamily = 'Arial, sans-serif';
     card.appendChild(id);
-    console.log(id);
+    // console.log(id);
 
     let department = document.createElement("p");
     department.innerText = "Department: " + this.Dep;
+    department.style.fontSize = '18px';
+    department.style.color = '#fff';
+    department.style.fontFamily = 'Arial, sans-serif';
     card.appendChild(department);
-    console.log(department);
+    // console.log(department);
 
     let level = document.createElement("p");
     level.innerText = "Level: " + this.level;
+    level.style.fontSize = '18px';
+    level.style.color = '#fff';
+    level.style.fontFamily = 'Arial, sans-serif';
     card.appendChild(level);
-    console.log(imgDiv);
+    // console.log(imgDiv);
 
     let salary = document.createElement("p");
     salary.innerText = "Salary: " + this.salary;
+    salary.style.fontSize = '18px';
+    salary.style.color = '#fff';
+    salary.style.fontFamily = 'Arial, sans-serif';
     card.appendChild(salary);
-    console.log(salary);
+    // console.log(salary);
 
     card.style.maxWidth = '300px';
     card.style.margin = '20px';
     card.style.padding = '20px';
-    card.style.backgroundColor = '#fff';
+    card.style.backgroundColor = '#008ef0';
     card.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
     card.style.textAlign = 'center';
 
@@ -112,7 +137,7 @@ function submitHandler(event) {
 
 
 
-function randEmpId(emp) {
+function randEmpId(emp) {       
     // source code =>  https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID
     emp.empId = crypto.randomUUID().slice(32);
 }
