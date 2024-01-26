@@ -53,7 +53,7 @@ Employee.prototype.render = function () {
     imgDiv.style.marginBottom = '20px';
     imgDiv.style.marginTop = '20px';
 
-    
+
     let imgBckGround = document.createElement("div");
 
     imgBckGround.appendChild(imgDiv);
@@ -113,8 +113,44 @@ Employee.prototype.render = function () {
     card.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
     card.style.textAlign = 'center';
 
-    main.appendChild(card);
+
+    switch (this.Dep) {
+        case 'Administration':
+            adminDiv.appendChild(card);
+            break;
+
+        case 'Marketing':
+            markDiv.appendChild(card);
+            break;
+
+        case 'Development':
+            devkDiv.appendChild(card);
+            break;
+
+
+        case 'Finance':
+            finakDiv.appendChild(card);
+            break;
+    }
 };
+
+let adminDiv = document.createElement("div");
+    adminDiv.style.backgroundColor = '#1b294b';
+    main.appendChild(adminDiv);
+
+
+    let markDiv = document.createElement("div");
+    markDiv.style.backgroundColor = '#fff';
+    main.appendChild(markDiv);
+
+    let devkDiv = document.createElement("div");
+    devkDiv.style.backgroundColor = '#1b294bff';
+    main.appendChild(devkDiv);
+
+
+    let finakDiv = document.createElement("div");
+    finakDiv.style.backgroundColor = '#fff';
+    main.appendChild(finakDiv);
 
 formElement.addEventListener("submit", submitHandler);
 
@@ -127,7 +163,7 @@ function submitHandler(event) {
     let level = event.target.lvl.value;
     let img = event.target.imgUrl.value;
 
-    
+
     let obj = new Employee(fullName, dep, level, img);
     randEmpId(obj);
     obj.calcSalary();
@@ -137,7 +173,7 @@ function submitHandler(event) {
 
 
 
-function randEmpId(emp) {       
+function randEmpId(emp) {
     // source code =>  https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID
     emp.empId = crypto.randomUUID().slice(32);
 }
