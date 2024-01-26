@@ -6,6 +6,8 @@ let level = document.getElementById("lvl");
 let img = document.getElementById("imgUrl");
 let btn = document.getElementById("subBtn");
 
+let empArr =[];
+
 let Employee = function (fullName, Dep, level, img) {
     this.empId = null;
     this.fullName = fullName;
@@ -13,6 +15,7 @@ let Employee = function (fullName, Dep, level, img) {
     this.level = level;
     this.img = img;
     this.salary = 1;
+    empArr.push(this);
 }
 
 Employee.prototype.calcSalary = function () {
@@ -40,138 +43,27 @@ Employee.prototype.calcSalary = function () {
     }
 }
 
-Employee.prototype.render = function () {
-    let main = document.getElementById("main");
-
-    let card = document.createElement("div");
-
-    let imgDiv = document.createElement("img");
-    imgDiv.src = this.img;
-    imgDiv.alt = "img";
-    imgDiv.style.width = '90%';
-    imgDiv.style.borderRadius = '50%';
-    imgDiv.style.marginBottom = '20px';
-    imgDiv.style.marginTop = '20px';
-
-
-    let imgBckGround = document.createElement("div");
-
-    imgBckGround.appendChild(imgDiv);
-    imgBckGround.style.borderRadius = '10%';
-
-    imgBckGround.style.backgroundColor = '#050040';
-
-
-    card.appendChild(imgBckGround);
-    // console.log(imgDiv);
-
-    let name = document.createElement("p");
-    name.innerText = "Name: " + this.fullName;
-    name.style.fontSize = '18px';
-    name.style.color = '#fff';
-    name.style.fontFamily = 'Arial, sans-serif';
-    card.appendChild(name);
-    // console.log(name);
-
-
-    let id = document.createElement("p");
-    id.innerText = "ID: " + this.empId;
-    id.style.fontSize = '18px';
-    id.style.color = '#fff';
-    id.style.fontFamily = 'Arial, sans-serif';
-    card.appendChild(id);
-    // console.log(id);
-
-    let department = document.createElement("p");
-    department.innerText = "Department: " + this.Dep;
-    department.style.fontSize = '18px';
-    department.style.color = '#fff';
-    department.style.fontFamily = 'Arial, sans-serif';
-    card.appendChild(department);
-    // console.log(department);
-
-    let level = document.createElement("p");
-    level.innerText = "Level: " + this.level;
-    level.style.fontSize = '18px';
-    level.style.color = '#fff';
-    level.style.fontFamily = 'Arial, sans-serif';
-    card.appendChild(level);
-    // console.log(imgDiv);
-
-    let salary = document.createElement("p");
-    salary.innerText = "Salary: " + this.salary;
-    salary.style.fontSize = '18px';
-    salary.style.color = '#fff';
-    salary.style.fontFamily = 'Arial, sans-serif';
-    card.appendChild(salary);
-    // console.log(salary);
-
-    card.style.maxWidth = '300px';
-    card.style.margin = '20px';
-    card.style.padding = '20px';
-    card.style.backgroundColor = '#008ef0';
-    card.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
-    card.style.textAlign = 'center';
-
-
-    switch (this.Dep) {
-        case 'Administration':
-            adminDiv.appendChild(card);
-            break;
-
-        case 'Marketing':
-            markDiv.appendChild(card);
-            break;
-
-        case 'Development':
-            devkDiv.appendChild(card);
-            break;
-
-
-        case 'Finance':
-            finakDiv.appendChild(card);
-            break;
-    }
-};
-
-let adminDiv = document.createElement("div");
-    adminDiv.style.backgroundColor = '#1b294b';
-    main.appendChild(adminDiv);
-
-
-    let markDiv = document.createElement("div");
-    markDiv.style.backgroundColor = '#fff';
-    main.appendChild(markDiv);
-
-    let devkDiv = document.createElement("div");
-    devkDiv.style.backgroundColor = '#1b294bff';
-    main.appendChild(devkDiv);
-
-
-    let finakDiv = document.createElement("div");
-    finakDiv.style.backgroundColor = '#fff';
-    main.appendChild(finakDiv);
-
 formElement.addEventListener("submit", submitHandler);
 
 function submitHandler(event) {
 
     event.preventDefault();
-    console.log(event);
     let fullName = event.target.fullName.value;
     let dep = event.target.dep.value;
     let level = event.target.lvl.value;
     let img = event.target.imgUrl.value;
 
-
     let obj = new Employee(fullName, dep, level, img);
     randEmpId(obj);
     obj.calcSalary();
-    obj.render();
-
+    saveData(empArr);
 }
 
-
+function saveData(arr)
+{
+    let stringArr = JSON.stringify(arr);
+    localStorage.setItem("Emloyee", stringArr);
+}
 
 function randEmpId(emp) {
     // source code =>  https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID

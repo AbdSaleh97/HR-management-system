@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./cssFiles/Accounting.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -18,8 +20,39 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
-    <main>
-       
+    <main id="main">
+        <table id="employeeTable" border="1">
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Number Of Employees</th>
+                    <th>Total Salary</th>
+                    <th>Average</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="Administration">
+                    <td>Administration</td>
+                </tr>
+                <tr id="Marketing">
+                    <td>Marketing</td>
+                </tr>
+
+                <tr id="Development">
+                    <td>Development</td>
+                </tr>
+                <tr id="Finance">
+                    <td>Finance</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr id="totalRow">
+                    <td>Total</td>
+                </tr>
+            </tfoot>
+        </table>
+        <script src="./jsFiles/accounting.js"></script>
+
     </main>
     <footer>
         <div class="social-icons">
@@ -29,4 +62,5 @@
         <p>&copy; 2024 prep-course project. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

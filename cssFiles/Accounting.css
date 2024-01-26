@@ -5,7 +5,10 @@ main{
     min-height: 75vh;
 }
 
-
+#employeeTable{
+   text-align: center;
+   font-size: larger;
+}
 nav {
     background-color: #333;
     overflow: hidden;
