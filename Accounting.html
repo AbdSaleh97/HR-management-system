@@ -4,23 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Employees</title>
     <link rel="stylesheet" href="./cssFiles/Accounting.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <img src="" alt="Logo">
-            </div>
+            <a href="#" class="logo">Employees Table</a>
+       
+        <nav class="navigation">
+          
             <a href="./index.html">Home</a>
             <a href="./Accounting.html">Accounting</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
-    <main id="main">
+    <section class="main">
         <table id="employeeTable" border="1">
             <thead>
                 <tr>
@@ -51,16 +53,18 @@
                 </tr>
             </tfoot>
         </table>
-        <script src="./jsFiles/accounting.js"></script>
-
-    </main>
+    </section>
     <footer>
         <div class="social-icons">
-            <a href="https://twitter.com">Twitter</a>
-            <a href="https://facebook.com">Facebook</a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-github-alt"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <p>&copy; 2024 prep-course project. All rights reserved.</p>
     </footer>
+    <script src="./jsFiles/accounting.js"></script>
+
 </body>
 
 </html>

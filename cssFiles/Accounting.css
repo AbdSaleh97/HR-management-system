@@ -1,43 +1,76 @@
-body{
-    min-height: 75vh;
-}
-main{
-    min-height: 75vh;
-}
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  header {
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+  }
+
+  
+  .logo {
+    text-decoration: none;
+    color: #3a6cf4;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+  }
+
+  .navigation a {
+    color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+  }
+
+  .navigation a:hover {
+    color: #601cfc;
+  }
+
+  section {
+    padding: 100px 200px;
+
+  }
+
+  .main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(https://th.bing.com/th?id=OIP.-9myWF0Ks3v39qcl7oUIkAHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
 
 #employeeTable{
    text-align: center;
    font-size: larger;
-}
-nav {
-    background-color: #333;
-    overflow: hidden;
-    
-}
-
-nav .logo {
-    float: left;
-    padding: 15px;
-}
-
-nav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+   font-weight: 600;
+   color: #000;
+   background-color: #601cfc;
+   opacity: 1;
 }
 
 footer {
-    background-color: #333;
-    color: #f2f2f2;
+    background-color: #2f0095;
+    color: white;
     text-align: center;
     padding: 10px;
     margin-top: auto;
     justify-content: flex-end;
 }
-
 .social-icons {
     margin-top: 10px;
     color: white;
@@ -50,3 +83,14 @@ footer {
     text-decoration: none;
     font-size: 20px;
 }
+body {
+    display: flex;
+    flex-flow: column wrap;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #050040;
+}
+
+
+
